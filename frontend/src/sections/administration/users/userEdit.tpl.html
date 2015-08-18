@@ -1,0 +1,66 @@
+<table class="table table-condensed">
+  <tr class="name">
+    <td width="50%" class="text-right">
+      <input type="text"
+             class="form-control text-right"
+             id="inputFirstName"
+             ng-model="selectedUser.firstName">
+    </td>
+    <td width="50%">
+      <input type="text"
+             class="form-control"
+             id="inputLastName"
+             ng-model="selectedUser.lastName">
+    </td>
+  </tr>
+  <tr>
+    <td class="text-right text-bold">Gruppe</td>
+    <td>
+      <select class="form-control"
+              ng-model="selectedUser.groupId"
+              ng-options="userGroup.id as userGroup.name for userGroup in userGroups">
+        <option value="">Gruppe zuordnen</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td class="text-right text-bold">Email</td>
+    <td>
+      <input type="email"
+             class="form-control"
+             ng-model="selectedUser.email">
+    </td>
+  </tr>
+  <tr>
+    <td class="text-right text-bold">Benutzername</td>
+    <td>
+      <input type="text"
+             class="form-control"
+             ng-model="selectedUser.userName">
+    </td>
+  </tr>
+  <tr>
+    <td class="text-right text-bold">Passwort</td>
+    <td>
+      <input type="password"
+             class="form-control"
+             ng-model="selectedUser.password">
+    </td>
+  </tr>
+  <tr>
+    <td class="text-right text-bold">MSN</td>
+    <td>
+      <input type="text"
+             class="form-control"
+             ng-model="selectedUser.msn">
+    </td>
+  </tr>
+  <tr>
+    <td class="text-right text-bold">Wählmethode</td>
+    <td>
+      <input type="text"
+             class="form-control"
+             ng-model="selectedUser.dialMethod">
+    </td>
+  </tr>
+</table>

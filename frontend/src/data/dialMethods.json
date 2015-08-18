@@ -1,0 +1,12 @@
+[
+  {
+    "id": 1,
+    "name": "SIP",
+    "linkstyle": "sip:"
+  },
+  {
+    "id": 2,
+    "name": "Telefonanlage",
+    "linkstyle": "/ctcrm/dial"
+  }
+]

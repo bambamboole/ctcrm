@@ -1,0 +1,15 @@
+{
+    "require": {
+        "bcosca/fatfree": "~3.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "ctcrm\\": "lib/",
+            "vendor\\fatfree\\": "vendor/bcosca/fatfree/"
+        },
+        "files": [
+            "config/databases.php"
+        ]
+    }
+}
+

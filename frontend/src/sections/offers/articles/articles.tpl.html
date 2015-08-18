@@ -1,0 +1,94 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="shadow panel panel-default">
+      <div class="blue white-border panel-heading">
+        <h3 class="panel-title text-white">
+          Artikel
+        </h3>
+      </div>
+      <div class="panel-body low-padding">
+        <div class="col-md-3 full-height contact-groups no-padding">
+          <a href="#" class="list-group-item text-bold" ng-click="clearFilter()">Alle Artikel</a>
+          <ul class="artGroups">
+            <li class="" ng-repeat="articleGroup in articleGroups | filter:{ id: '!-1'}">
+              <edit-in-place ng-model="articleGroup"
+                             callback="updateArticleGroup(articleGroup)"
+                             ng-click="setGroup(articleGroup.id)">
+
+              </edit-in-place>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-9 no-padding b-l">
+          <div class="newArticle">
+            <a class="btn btn-xs btn-default pull-right newArticle" ng-click="openModal()">Neuer Artikel</a>
+
+            <div class="input-group search-form">
+              <span class="input-group-addon">
+                <i class="fa fa-search text-md"></i>
+              </span>
+              <input type="text"
+                     class="search-field"
+                     placeholder="Suchen..."
+                     ng-model="searchText">
+            </div>
+          </div>
+          <table ng-table="tableParams" template-pagination="custom/pager" class="table table-striped">
+            <tr ng-repeat="article in $data | filter:searchText | isInGroup:selectedGroup">
+              <td width="30%" header-class="text-left" data-title="'Artikelname'">
+                <span ng-if="!article.$edit">{{article.name}}</span>
+
+                <div ng-if="article.$edit"><input class="form-control" type="text" ng-model="article.name"/></div>
+              </td>
+              <td header-class="text-left" data-title="'Einkaufinfo'">
+                <span ng-if="!article.$edit">{{article.purchaseInfo}}</span>
+
+                <div ng-if="article.$edit"><input class="form-control" type="text" ng-model="article.purchaseInfo"/>
+                </div>
+              </td>
+              <td width="10%" header-class="text-right" class="text-right" data-title="'Preis'">
+                <span ng-if="!article.$edit">{{article.price}},00€</span>
+
+                <div ng-if="article.$edit"><input class="text-right form-control" type="text"
+                                                  ng-model="article.price"/></div>
+              </td>
+              <td width="5%">
+                <button class="btn btn-primary btn-xs" ng-click="article.$edit = true" ng-if="!article.$edit">Edit
+                </button>
+                <button class="btn btn-primary btn-xs" ng-click="updateArticle(article);" ng-if="article.$edit">
+                  Save
+                </button>
+              </td>
+            </tr>
+          </table>
+          <script type="text/ng-template" id="custom/pager">
+            <ul class="pager ng-cloak">
+              <li ng-repeat="page in pages"
+                  ng-class="{'disabled': !page.active, 'previous': page.type == 'prev', 'next': page.type == 'next'}"
+                  ng-show="page.type == 'prev' || page.type == 'next'" ng-switch="page.type">
+                <a ng-switch-when="prev" ng-click="params.page(page.number)" href="">&laquo; Previous</a>
+                <a ng-switch-when="next" ng-click="params.page(page.number)" href="">Next &raquo;</a>
+              </li>
+              <li>
+                <div class="btn-group">
+                  <button type="button" ng-class="{'active':params.count() == 10}" ng-click="params.count(10)"
+                          class="btn btn-default">10
+                  </button>
+                  <button type="button" ng-class="{'active':params.count() == 25}" ng-click="params.count(25)"
+                          class="btn btn-default">25
+                  </button>
+                  <button type="button" ng-class="{'active':params.count() == 50}" ng-click="params.count(50)"
+                          class="btn btn-default">50
+                  </button>
+                  <button type="button" ng-class="{'active':params.count() == 100}" ng-click="params.count(100)"
+                          class="btn btn-default">100
+                  </button>
+                </div>
+              </li>
+            </ul>
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

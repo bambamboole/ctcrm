@@ -1,0 +1,16 @@
+.artGroups{
+    list-style: none;
+    padding: 0;
+}
+.newArticle{
+   border-bottom: 1px solid #ddd;
+}
+.newArticle .btn{
+   margin: 7px;
+}
+.newArticle .search-form{
+    border-bottom: 0;
+}
+.newArticle .search-form .input-group-addon{
+    background-color: #fff;
+}

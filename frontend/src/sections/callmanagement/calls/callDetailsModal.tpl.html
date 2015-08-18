@@ -1,0 +1,142 @@
+<div class="modal-header">
+  <h3 class="modal-title">Anrufdeteils</h3>
+</div>
+<form name="form">
+
+  <div class="modal-body">
+    <div class="form-horizontal">
+      <div class="form-group">
+        <label for="number"
+               class="col-sm-2 control-label">
+          Nummer
+        </label>
+
+        <div class="col-sm-10">
+          <input type="text"
+                 ng-model="call.number"
+                 class="form-control"
+                 id="number"
+                 placeholder="Nummer"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="firstName"
+               class="col-sm-2 control-label">
+          Vorname
+        </label>
+
+        <div class="col-sm-10">
+          <input type="text"
+                 ng-model="call.contact.firstName"
+                 class="form-control"
+                 id="firstName"
+                 placeholder="Vorname"/>
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="lastName"
+               class="col-sm-2 control-label">
+          Nachname
+        </label>
+
+        <div class="col-sm-10">
+          <input type="text"
+                 ng-model="call.contact.lastName"
+                 class="form-control"
+                 id="lastName"
+                 placeholder="Nachname"/>
+        </div>
+      </div>
+      <div class="text-center">
+        <button type="button"
+                class="btn btn-info"
+                ng-click="optionalIsCollapsed=!optionalIsCollapsed">
+          optional
+        </button>
+      </div>
+      <hr>
+      <div collapse="optionalIsCollapsed">
+
+        <div class="form-group">
+          <label for="email"
+                 class="col-sm-2 control-label">
+            Emailadresse
+          </label>
+
+          <div class="col-sm-10">
+            <input type="text"
+                   ng-model="call.contact.email"
+                   class="form-control"
+                   id="email"
+                   placeholder="Emailadresse"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="companyName"
+                 class="col-sm-2 control-label">
+            Firmenname
+          </label>
+
+          <div class="col-sm-10">
+            <input class="form-control"
+                   type="text"
+                   id="companyName"
+                   ng-model="call.contact.company"
+                   placeholder="Firmenname"/>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="contactNote"
+                 class="col-sm-2 control-label">
+            Kontaktnotiz
+          </label>
+
+          <div class="col-sm-10">
+            <textarea class="form-control"
+                      type="text"
+                      rows="6"
+                      ng-model="call.contact.note"
+                      id="contactNote"
+                      placeholder="Kontaktnotiz">
+            </textarea>
+          </div>
+        </div>
+        <hr>
+      </div>
+
+      <div class="form-group">
+        <label for="callNote"
+               class="col-sm-2 control-label">
+          Nachricht
+        </label>
+
+        <div class="col-sm-10">
+          <textarea class="form-control"
+                    id="callNote"
+                    rows="10"
+                    type="text"
+                    ng-model="call.note"
+                    placeholder="Nachricht">
+          </textarea>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal-footer">
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+        <button type="button"
+                class="btn btn-danger"
+                ng-click="cancel()">
+          Cancel
+        </button>
+        <button type="submit"
+                class="btn btn-primary"
+                ng-click="submit()">
+          Save
+        </button>
+      </div>
+    </div>
+  </div>
+</form>

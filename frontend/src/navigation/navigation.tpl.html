@@ -1,0 +1,17 @@
+<div id="main_navigation" class="blue main-menu">
+  <ul>
+    <li class="main_list_item" ng-repeat="mainItem in navigation.menu track by $index" ng-if="isAllowed(mainItem.access)">
+      <input type="radio" name="checkbox-set"
+             ng-checked="mainItem.active"
+             ng-click="navigation.goto(mainItem)"
+        />
+      <a class="main_list_link" href="#">{{ mainItem.name }}</a>
+      <ul>
+        <li ng-repeat="item in mainItem.sub"  ng-if="isAllowed(item.access)">
+          <a href="#" ng-click="navigation.goto(item)">{{item.name}}</a>
+        </li>
+      </ul>
+    </li>
+
+  </ul>
+</div>

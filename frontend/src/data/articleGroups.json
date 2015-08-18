@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Gehäuse"
+  },
+  {
+    "id": 2,
+    "name": "Netzteil"
+  },
+  {
+    "id": 3,
+    "name": "Mainboard"
+  },
+  {
+    "id": 4,
+    "name": "Prozessor"
+  },
+  {
+    "id": 5,
+    "name": "Arbeitsspeicher"
+  },
+  {
+    "id": 6,
+    "name": "SSD"
+  },
+  {
+    "id": 7,
+    "name": "Festplatte"
+  },
+  {
+    "id": 8,
+    "name": "Grafikkarte"
+  },
+  {
+    "id": 9,
+    "name": "DVD-Laufwerk"
+  },
+  {
+    "id": 10,
+    "name": "Raid-Controller"
+  },
+  {
+    "id": 11,
+    "name": "Card-Reader"
+  },
+  {
+    "id": 12,
+    "name": "Netzwerkkarte"
+  }
+]

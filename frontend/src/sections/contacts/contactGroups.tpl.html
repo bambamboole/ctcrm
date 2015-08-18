@@ -1,0 +1,14 @@
+<div class="col-md-3 full-height contact-groups b-r">
+    <span class="list text-bold cursor-pointer"
+          ng-click="clearFilter()">
+      Alle Gruppen
+    </span>
+  <ul class="contact-groups">
+    <li ng-repeat="contactGroup in contactGroups" ng-class="{'selected': selectedGroupId == contactGroup.id }">
+      <edit-in-place ng-model="contactGroup"
+                     callback="updateContactGroup(contactGroup)"
+                     ng-click="setGroup(contactGroup.id)">
+      </edit-in-place>
+    </li>
+  </ul>
+</div>

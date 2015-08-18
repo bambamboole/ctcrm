@@ -1,0 +1,108 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="shadow panel panel-default">
+      <div class="blue white-border panel-heading">
+        <h3 class="panel-title text-white">
+          Anrufe
+        </h3>
+      </div>
+      <div class="panel-body low-padding">
+        <table class="table table-condensed table-striped table-bordered">
+          <thead>
+          <th class="text-center" width="10%">Datum</th>
+          <th class="text-center" width="15%">Kontakt</th>
+          <th width="65%">Nachricht</th>
+          <th class="text-center" width="5%">Status</th>
+          <th width="5%"></th>
+          </thead>
+          <tr ng-repeat="call in calls | filter:{state: '!'+2}" class="animate-repeat">
+            <td width="10%"
+                class="text-center">
+              {{call.timestamp | formatMoment:'ddd DD MMM'}}<br>
+              {{call.timestamp | formatMoment:'LT'}}
+
+            </td>
+            <td width="15%"
+                class="text-center">
+              <span tooltip="{{call.contact.company}}"
+                    tooltip-trigger="mouseenter"
+                    tooltip-placement="left">
+                    {{call.contact.firstName}} {{call.contact.lastName}}
+              </span>
+              <br>
+              <dial number="call.number"></dial>
+            </td>
+            <td class="text-left">
+              {{call.note}}
+            </td>
+            <td width="5%"
+                class="text-center">
+              <button class="btn"
+                      state-button="call"
+                      callback="updateCallState(call)">
+                &nbsp;
+              </button>
+            </td>
+            <td width="5%"
+                class="text-center">
+              <a class="btn btn-primary"
+                 ng-click="editCall(call)">
+                Edit
+              </a>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-7">
+    <div class="shadow panel panel-default">
+      <div class="blue white-border panel-heading">
+        <h3 class="panel-title text-white">
+          Aufgaben
+        </h3>
+      </div>
+      <div class="panel-body low-padding">
+        <table width="100%">
+          <tr ng-repeat="task in tasks | filter:{state: '!'+2}" class="animate-repeat">
+
+            <td width="95%">
+              <edit-in-place ng-model="task"
+                             callback="updateTask(task)">
+              </edit-in-place>
+            </td>
+            <td width="5%">
+              <button class="btn"
+                      state-button="task"
+                      callback="updateTaskState(task)">
+                &nbsp;
+              </button>
+            </td>
+
+          </tr>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-5">
+    <div class="shadow panel panel-default">
+      <div class="blue white-border panel-heading">
+        <h3 class="panel-title text-white">
+          Favoriten
+        </h3>
+      </div>
+      <div class="panel-body low-padding">
+        <ul class="no-padding">
+          <li class="list-group-item"
+              ng-repeat="favorite in favorites">
+            {{favorite.firstName}} {{favorite.lastName}}
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+</div>

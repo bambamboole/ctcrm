@@ -1,0 +1,26 @@
+[
+  {
+    "userId": 1,
+    "contactId": 1,
+    "firstName": "Hans",
+    "lastName": "Wurst"
+  },
+  {
+    "userId": 1,
+    "contactId": 2,
+    "firstName": "Test",
+    "lastName": "Favorit"
+  },
+  {
+    "userId": 1,
+    "contactId": 3,
+    "firstName": "Vorname",
+    "lastName": "Nachname"
+  },
+  {
+    "userId": 1,
+    "contactId": 4,
+    "firstName": "Kalle",
+    "lastName": "Hott"
+  }
+]

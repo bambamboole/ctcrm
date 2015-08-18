@@ -1,0 +1,13 @@
+[
+  {
+    "id": 1,
+    "groupId": 1,
+    "firstName": "Manuel",
+    "lastName": "Christlieb",
+    "userName": "mc",
+    "password": "123456",
+    "email": "mc@ct-computer.com",
+    "MSN": "12",
+    "dialMethod": "sip"
+  }
+]

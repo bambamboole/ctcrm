@@ -1,0 +1,31 @@
+<div class="col-md-12">
+  <div class="shadow panel panel-default">
+    <div class="blue white-border panel-heading">
+      <h3 class="panel-title text-white">
+        Aufgaben
+      </h3>
+    </div>
+    <div class="panel-body low-padding vh-height">
+        <table width="100%">
+          <tr ng-repeat="task in tasks | filter:{state: '!'+2}" class="animate-repeat">
+
+            <td width="95%">
+              <edit-in-place ng-model="task"
+                               callback="updateTask(task)">
+            </edit-in-place>
+            </td>
+            <td width="5%">
+              <button class="btn"
+                      state-button="task"
+                      callback="updateTaskState(task)">
+                &nbsp;
+              </button>
+            </td>
+
+          </tr>
+        </table>
+
+
+    </div>
+  </div>
+</div>

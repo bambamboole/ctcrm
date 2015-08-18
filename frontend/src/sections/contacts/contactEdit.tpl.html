@@ -1,0 +1,81 @@
+<table class="table table-condensed">
+  <tr class="name">
+    <td width="50%" class="text-right">
+      <input type="text"
+             class="form-control text-right"
+             id="inputFirstName"
+             ng-model="selectedContact.firstName">
+    </td>
+    <td width="50%">
+      <input type="text"
+             class="form-control"
+             id="inputLastName"
+             ng-model="selectedContact.lastName">
+    </td>
+  </tr>
+  <tr>
+    <td class="text-right text-bold">Gruppe</td>
+    <td>
+      <select class="form-control"
+              ng-model="selectedContact.groupId"
+              ng-options="contactGroup.id as contactGroup.name for contactGroup in contactGroups">
+        <option value="">Gruppe zuordnen</option>
+      </select>
+    </td>
+  </tr>
+  <tr>
+    <td class="text-right text-bold">Email</td>
+    <td>
+      <input type="email"
+             class="form-control"
+             ng-model="selectedContact.email">
+    </td>
+  </tr>
+  <tr>
+    <td class="text-right text-bold">Firma</td>
+    <td>
+      <input type="text"
+             class="form-control"
+             ng-model="selectedContact.company">
+    </td>
+  </tr>
+  <tr ng-repeat="number in selectedContact.numbers">
+    <td>
+      <select class="col-sm-6 pull-right form-control"
+              ng-model="number.typeId"
+              ng-options="item.id as item.name for item in numberTypes">
+      </select>
+    </td>
+    <td>
+      <input class="col-sm-6 form-control"
+             placeholder="Nummer"
+             ng-model="number.number">
+      <span class="input-group-btn">
+      <button class="btn btn-default"
+              ng-click="deleteNumber($index)">
+        <i class="fa fa-trash"></i>
+      </button>
+        </span>
+    </td>
+  </tr>
+  <tr>
+    <td></td>
+    <td>
+      <button class="btn btn-xs btn-default"
+              ng-click="addNumber()">
+        <i class="fa fa-plus"></i>
+      </button>
+    </td>
+  </tr>
+  <tr>
+    <td class="text-right text-bold">Info</td>
+    <td>
+      <textarea
+          rows="7"
+          class="form-control"
+          placeholder="Info"
+          ng-model="selectedContact.info">
+      </textarea>
+    </td>
+  </tr>
+</table>

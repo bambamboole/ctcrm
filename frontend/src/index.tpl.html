@@ -1,0 +1,52 @@
+<nav class="navbar navbar-blue">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+              data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" ui-sref="dashboard">CTCRM</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <form class="navbar-form navbar-left" role="search">
+        <div class="input-group">
+          <input type="text" class="form-control" placeholder="Suchen...">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button">Go!</button>
+      </span>
+        </div>
+      </form>
+      <ul class="nav navbar-nav navbar-right">
+        <div class="btn-group" dropdown is-open="status.isopen">
+          <button type="button" class="btn btn-user dropdown-toggle" dropdown-toggle ng-disabled="disabled">
+            Button dropdown <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+            <li><a href="#">Something else here</a></li>
+            <li class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+
+<div class="col-md-2">
+  <ctcrm-navigation></ctcrm-navigation>
+</div>
+<div class="col-md-10" ui-view>
+
+</div>
+
+
+
+

@@ -1,0 +1,24 @@
+<div class="col-md-3 full-height contact-list b-r">
+  <div class="input-group search-form">
+    <span class="input-group-addon">
+      <i class="fa fa-search text-md"></i>
+    </span>
+    <input type="text"
+           class="search-field"
+           placeholder="Suchen..."
+           ng-model="searchText">
+  </div>
+
+  <ul class="contact-groups">
+    <li ng-repeat="contact in contacts | filter:searchText | isInGroup:selectedGroupId">
+      <a class="list-group-item cursor-pointer"
+         ng-class="{'selected': selectedContact == contact }"
+         ng-click="selectContact(contact)">
+        {{ contact.firstName || contact.tempName }}
+          <span class="text-bold">
+            {{ contact.lastName}}
+          </span>
+      </a>
+    </li>
+  </ul>
+</div>

@@ -1,0 +1,9 @@
+<div class="col-md-6 full-height contact">
+  <form>
+    <ng-include src="'sections/contacts/contactMenuBar.tpl.html'"></ng-include>
+    <div class="form-inline row">
+      <ng-include ng-if="!selectedContact.editing && selectedContact" src="'sections/contacts/contact.tpl.html'"></ng-include>
+      <ng-include ng-if="selectedContact.editing" src="'sections/contacts/contactEdit.tpl.html'"></ng-include>
+    </div>
+  </form>
+</div>

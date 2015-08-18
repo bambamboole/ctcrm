@@ -1,0 +1,14 @@
+<div class="edit-in-place">
+  <span class="list cursor-pointer"
+     ng-if="!editInPlace.edit">
+    {{ngModel.name}}
+  </span>
+  <input class="list"
+         type="text"
+         ng-if="editInPlace.edit"
+         ng-model="ngModel.name"
+    >
+
+  <i class="fa fa-pencil hide" ng-click="toggle()" ng-hide="editInPlace.edit"></i>
+  <i class="fa fa-floppy-o" ng-click="save()" ng-show="editInPlace.edit"></i>
+</div>

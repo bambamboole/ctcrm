@@ -1,0 +1,35 @@
+[
+    {
+        "id": 1,
+        "timestamp": "2014-10-17 20:02:36",
+        "duration": 3,
+        "number": "082112345",
+        "note": "blabla",
+        "state": 0,
+        "contact": {
+            "id": 1,
+            "company": "google",
+            "firstName": "larry",
+            "lastName": "page",
+            "email": "lp@gmail.com",
+            "note": "nix"
+        }
+    },
+    {
+      "id": 1,
+      "timestamp": "2014-12-27 10:02:36",
+      "duration": 3,
+        "number": "082112345",
+        "note": "blabla",
+        "state": 0,
+        "contact": {
+           "id": null,
+            "company": null,
+            "firstName": null,
+            "lastName": null,
+            "email": null,
+            "note": null
+        }
+    }
+]
+

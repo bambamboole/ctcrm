@@ -1,0 +1,28 @@
+<table class="table  table-condensed">
+  <tr class="name">
+    <td width="50%" class=" text-right">
+      {{ selectedUser.lastName }}
+    </td>
+    <td width="50%">{{ selectedUser.firstName }}</td>
+  </tr>
+  <tr>
+    <td class="text-right text-bold">Gruppe</td>
+    <td>{{getGroupName(selectedUser.groupId)}}</td>
+  </tr>
+  <tr>
+    <td class="text-right text-bold">Email</td>
+    <td>{{ selectedUser.email }}</td>
+  </tr>
+  <tr>
+    <td class="text-right text-bold">Benutzername</td>
+    <td>{{ selectedUser.email }}</td>
+  </tr>
+  <tr>
+    <td class="text-right text-bold">MSN</td>
+    <td>{{ selectedUser.msn }}</td>
+  </tr>
+  <tr>
+    <td class="text-right text-bold">Wählmethode</td>
+    <td>{{selectedUser.dialMethod}}</td>
+  </tr>
+</table>

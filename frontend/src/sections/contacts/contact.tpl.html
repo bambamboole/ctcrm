@@ -1,0 +1,28 @@
+<table class="table  table-condensed">
+  <tr class="name">
+    <td width="50%" class=" text-right">
+      {{ selectedContact.lastName }}
+    </td>
+    <td width="50%">{{ selectedContact.firstName }}</td>
+  </tr>
+  <tr>
+    <td class="text-right text-bold">Gruppe</td>
+    <td>{{getGroupName(selectedContact.groupId)}}</td>
+  </tr>
+  <tr>
+    <td class="text-right text-bold">Email</td>
+    <td>{{ selectedContact.email }}</td>
+  </tr>
+  <tr>
+    <td class="text-right text-bold">Firma</td>
+    <td>{{ selectedContact.company }}</td>
+  </tr>
+  <tr ng-repeat="number in selectedContact.numbers">
+    <td class="text-right text-bold">{{getNumberType(number.typeId).name}}</td>
+    <td><dial number="number.number"></dial></td>
+  </tr>
+  <tr>
+    <td class="text-right text-bold">Info</td>
+    <td>{{selectedContact.info}}</td>
+  </tr>
+</table>

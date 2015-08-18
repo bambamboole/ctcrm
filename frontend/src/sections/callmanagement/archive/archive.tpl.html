@@ -1,0 +1,31 @@
+<div class="row">
+  <div class="col-md-12">
+    <div class="shadow panel panel-default">
+      <div class="blue white-border panel-heading">
+        <h3 class="panel-title text-white">
+          Anrufarchiv
+        </h3>
+      </div>
+      <div class="panel-body low-padding">
+        <div class="row">
+          <div class="col-md-8">
+
+          </div>
+          <div class="col-md-4">
+            <ui-select ng-model="contact.selected" theme="select2" ng-disabled="disabled" style="min-width: 300px;">
+              <ui-select-match placeholder="Kontakt/Nummer">{{$select.selected.firstName}} {{$select.selected.lastName}}
+              </ui-select-match>
+              <ui-select-choices repeat="contact in contacts | filter: $select.search">
+                <div ng-bind-html="contact.firstName + ' ' + contact.lastName | highlight: $select.search"></div>
+                <small>
+                  Firma: {{contact.company}}
+
+                </small>
+              </ui-select-choices>
+            </ui-select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

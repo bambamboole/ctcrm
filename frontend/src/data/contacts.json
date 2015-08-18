@@ -1,0 +1,75 @@
+[
+  {
+    "id": 1,
+    "groupId": 1,
+    "firstName": "Manuel",
+    "lastName": "Christlieb",
+    "email": "mc@ct-computer.com",
+    "company": "CT Computer GmbH",
+    "info": "lorem ipsum dolor amet",
+    "numbers": [
+      {
+        "typeId": 1,
+        "number": "0821344820"
+      },
+      {
+        "typeId": 2,
+        "number": "082112345678"
+      },
+      {
+        "typeId": 3,
+        "number": "01713292689"
+      },
+      {
+        "typeId": 4,
+        "number": "08213448220"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "groupId": 2,
+    "firstName": "Carsten",
+    "lastName": "Prumbs",
+    "email": "cp@ct-computer.com",
+    "company": "CT Computer GmbH",
+    "info": "lorem ipsum dolor amet",
+    "numbers": [
+      {
+        "typeId": 1,
+        "number": "0821344820"
+      },
+      {
+        "typeId": 2,
+        "number": "082112345678"
+      },
+      {
+        "typeId": 3,
+        "number": "01601111111"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "groupId": 3,
+    "firstName": "Daniel",
+    "lastName": "Suder",
+    "email": "ds@ct-computer.com",
+    "company": "CT Computer GmbH",
+    "info": "lorem ipsum dolor amet",
+    "numbers": [
+      {
+        "typeId": 1,
+        "number": "0821344820"
+      },
+      {
+        "typeId": 2,
+        "number": "082112345678"
+      },
+      {
+        "typeId": 3,
+        "number": "01722222222"
+      }
+    ]
+  }
+]

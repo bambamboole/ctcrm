@@ -1,0 +1,275 @@
+#main_navigation {
+    width: 100%;
+    height: 100%;
+    font-size: 12px;
+    font-weight: normal;
+    outline: none;
+    float: left;
+    box-shadow: 1px 0px 4px rgba(0, 0, 0, 0.5), inset -1px 1px 2px rgba(250, 250, 250, 0.3);
+    border-radius: 10px;
+}
+
+.main-menu {
+    position: relative;
+    z-index: 22;
+    font-family: 'Monda', tahoma, serif;
+    letter-spacing: 0pt;
+}
+
+.main-menu ul li ul {
+    font-family: tahoma, serif;
+    letter-spacing: 0pt;
+}
+
+.main-menu ul li a, .main-menu ul li a:link, .main-menu ul li a:visited {
+    border-bottom: 4pt solid transparent;
+    padding-bottom: 10px;
+    padding-top: 8px;
+    outline: none;
+}
+
+.main-menu ul {
+    margin: 0;
+    padding: 0px;
+    list-style-type: none;
+}
+
+.main-menu ul li a, .main-menu ul li {
+    position: relative;
+    display: block;
+}
+
+.main-menu ul li {
+    display: block;
+    height: auto;
+    position: relative;
+}
+
+.main-menu input[type=radio] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 50px;
+    width: 100%;
+    cursor: pointer;
+    border: 0;
+    padding: 0;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+    filter: alpha(opacity=0);
+    opacity: 0;
+    z-index: 100;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+.main-menu input ~ ul {
+    overflow: hidden;
+    max-height: 0px;
+    opacity: 0;
+
+    -webkit-transition: all 0.8s ease-in-out;
+    -moz-transition: max-height 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+
+}
+
+.main-menu input:checked ~ ul {
+
+    max-height: 500px;
+    opacity: 1;
+
+}
+
+.main_list_item {
+    height: 40px;
+}
+
+.main-menu ul li a.main_list_link, .main-menu ul li a.main_list_link:link {
+    line-height: 30px;
+    text-shadow: none;
+    font-size: 13px;
+    text-transform: uppercase;
+
+}
+
+.main-menu ul li > a {
+    display: block;
+    text-decoration: none;
+    overflow: hidden;
+    padding: 0px 15px;
+    /*border-radius:3px;*/
+}
+
+* html .main-menu ul li a {
+    display: block;
+}
+
+.main-menu ul li ul li {
+
+    border-right: none !important;
+    color: #FFF;
+    padding: 0px;
+    margin: 0px;
+}
+
+.main-menu ul li ul li a {
+    margin: 0px;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: width 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+
+}
+
+.main-menu ul li ul li {
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+    border-bottom: solid 1px #ececec;
+    width: 100%;
+
+}
+
+.main-menu ul ul {
+    background: #FFF;
+    color: #707070;
+}
+
+.main-menu ul ul li a, .main-menu ul ul li a:link, .main-menu ul ul li a:visited {
+    height: 100%;
+    text-transform: capitalize;
+    margin-right: 0px !important;
+    margin-left: 0px !important;
+    font-size: 14px;
+    color: #707070;
+    z-index: 100;
+
+}
+
+.main-menu ul ul li:hover > a {
+    cursor: pointer;
+    text-decoration: none !important;
+    padding-left: 30px;
+}
+
+.main-menu ul ul li > a:after {
+    content: "";
+    opacity: 0;
+    position: absolute;
+    left: 20px;
+    top: 16px;
+    width: 0;
+    height: 0;
+    border-top: 6px solid transparent;
+    border-bottom: 6px solid transparent;
+
+    border-left: 5px solid #FEFEFE;
+    -webkit-transition: all 0.2s ease-in-out;
+    -moz-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+}
+
+.main-menu ul ul li:hover > a:after {
+    content: "";
+    opacity: 1;
+    position: absolute;
+    left: 0px;
+    top: 14px;
+    width: 0;
+    height: 0;
+
+    border-left: 5px solid #FEFEFE;
+}
+
+.main-menu ul ul ul {
+
+    position: absolute;
+    left: 5px;
+    top: -5px;
+}
+
+/* COLORS */
+/* *********************************************************************************************************** */
+
+/* BLUE */
+.blue {
+    background: #0095bb;
+    border: 2px solid #FFF;
+
+    /* gradient */
+    background-image: linear-gradient(top, #0095bb, #017f9f); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0095bb', endColorstr='#017f9f'); /* IE5.5 - 7 */
+    -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0095bb', endColorstr='#017f9f'); /* IE8 */
+    background: -ms-linear-gradient(top, #0095bb, #017f9f); /* IE9 */
+    background: -moz-linear-gradient(top, #0095bb, #017f9f); /* Firefox */
+    background: -o-linear-gradient(top, #0095bb, #017f9f); /* Opera 11  */
+    background: -webkit-linear-gradient(top, #0095bb, #017f9f); /* Chrome 11  */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #0095bb), color-stop(1, #017f9f)); /* Chrome 10, Safari */
+}
+
+.blue .main_list_item {
+    border-bottom: 1px solid #057799;
+    box-shadow: 0px 1px 0px #469eb5;
+}
+
+.blue ul ul {
+    border-top: 2px solid #b4df26;
+}
+
+.blue ul ul li:hover > a {
+    text-decoration: none !important;
+    color: #FFF !important;
+    background: #2baaca;
+    padding-left: 30px;
+    text-shadow: 1px 0px 0px #3080b0;
+}
+
+.blue ul li a {
+    color: #FFFFFF;
+}
+
+.blue ul li > a:hover, .blue ul li:hover > a {
+    color: #222 !important;
+}
+
+/*FIXING border */
+.main_list_item ul:last-child {
+    border-bottom: none;
+}
+
+.main_list_item:last-child {
+    border-bottom: none;
+    box-shadow: none;
+}
+
+.main-menu input ~ a:after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 19px;
+
+    border: 3px solid #FEFEFE;
+
+    -moz-transition: .3s;
+    -ms-transition: .3s;
+    -o-transition: .3s;
+    -webkit-transition: .3s;
+    transition: .3s;
+}
+
+.main-menu input:checked ~ a:after {
+    content: "";
+    position: absolute;
+    left: 4px;
+    top: 19px;
+    -webkit-transform: translate(0px, 0px) rotate(90deg);
+    -moz-transform: translate(0px, 0px) rotate(90deg);
+    -o-transform: translate(0px, 0px) rotate(90deg);
+    -ms-transform: translate(0px, 0px) rotate(90deg);
+    transform: translate(0px, 0px) rotate(90deg);
+
+}

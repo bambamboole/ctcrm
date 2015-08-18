@@ -1,0 +1,63 @@
+<div class="modal-header">
+  <h3 class="modal-title">I'm a modal!</h3>
+</div>
+<div class="modal-body">
+  <form class="form-horizontal">
+    <div class="form-group">
+      <label for="artName" class="col-sm-2 control-label">Artikelname</label>
+
+      <div class="col-sm-7">
+        <input type="text" class="form-control" id="artName" ng-model="newArticle.name">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="articleGroup" class="col-sm-2 control-label">Artikelgruppe</label>
+
+      <div class="col-sm-7">
+        <select id="articleGroup"
+                class="form-control"
+                ng-model="newArticle.groupId"
+                ng-options="articleGroup.id as articleGroup.name for articleGroup in articleGroups"
+                required="true">
+          <option value="">Gruppe zuordnen
+          </option>
+        </select>
+      </div>
+    </div>
+
+    <div class="form-group" ng-if="newArticle.groupId == -1">
+      <label for="newGroup" class="col-sm-2 control-label">Neue Artikelgruppe</label>
+
+      <div class="col-sm-7">
+        <input type="text" class="form-control" id="newGroup" ng-model="newArticle.newGroup">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="purchaseInfo" class="col-sm-2 control-label">Einkaufinfo</label>
+
+      <div class="col-sm-7">
+        <input type="text" class="form-control" id="purchaseInfo" ng-model="newArticle.purchaseInfo">
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="price" class="col-sm-2 control-label">Preis</label>
+
+      <div class="col-sm-7">
+        <input type="text" class="form-control" id="price" ng-model="newArticle.price">
+      </div>
+    </div>
+    <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-7">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" ng-model="newArticle.visible"> Sichtbar
+          </label>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>
+<div class="modal-footer">
+  <button class="btn btn-primary" ng-click="save()">OK</button>
+  <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>

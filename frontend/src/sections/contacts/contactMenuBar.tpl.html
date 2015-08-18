@@ -1,0 +1,29 @@
+<div class="col-md-12 text-center b-b menu">
+  <button class="btn btn-xs btn-default pull-left"
+          ng-if="selectedContact"
+          ng-hide="selectedContact.editing"
+          ng-click="editContact(selectedContact)">
+    Bearbeiten
+  </button>
+  <button class="btn btn-xs btn-default pull-left"
+          ng-show="selectedContact.editing"
+          ng-click="saveContact(selectedContact)">
+    Speichern
+  </button>
+  <button class="btn btn-xs btn-default text-center"
+          ng-if="!selectedContact.editing"
+          ng-click="newContact()">
+    Neuer Kontakt
+  </button>
+  <button class="btn btn-xs btn-default pull-right"
+          ng-show="selectedContact.editing"
+          ng-click="cancelEdit(selectedContact)">
+    <i class="fa fa-times"></i>
+  </button>
+  <button class="btn btn-xs btn-default pull-right"
+          ng-if="selectedContact"
+          ng-hide="selectedContact.editing"
+          ng-click="deleteContact(selectedContact.id)">
+    <i class="fa fa-trash"></i>
+  </button>
+</div>

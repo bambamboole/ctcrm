@@ -1,0 +1,29 @@
+<div class="col-md-12 text-center b-b menu">
+  <button class="btn btn-xs btn-default pull-left"
+          ng-if="selectedUser"
+          ng-hide="selectedUser.editing"
+          ng-click="editUser(selectedUser)">
+    Bearbeiten
+  </button>
+  <button class="btn btn-xs btn-default pull-left"
+          ng-show="selectedUser.editing"
+          ng-click="saveUser(selectedUser)">
+    Speichern
+  </button>
+  <button class="btn btn-xs btn-default text-center"
+          ng-if="!selectedUser.editing"
+          ng-click="newUser()">
+    Neuer Benutzer
+  </button>
+  <button class="btn btn-xs btn-default pull-right"
+          ng-show="selectedUser.editing"
+          ng-click="cancelEdit(selectedUser)">
+    <i class="fa fa-times"></i>
+  </button>
+  <button class="btn btn-xs btn-default pull-right"
+          ng-if="selectedUser"
+          ng-hide="selectedUser.editing"
+          ng-click="deleteUser(selectedUser.id)">
+    <i class="fa fa-trash"></i>
+  </button>
+</div>

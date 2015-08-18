@@ -1,0 +1,18 @@
+[
+  {
+    "id": 1,
+    "name": "Geschäftlich"
+  },
+  {
+    "id": 2,
+    "name": "Privat"
+  },
+  {
+    "id": 3,
+    "name": "Mobil"
+  },
+  {
+    "id": 3,
+    "name": "Fax"
+  }
+]
